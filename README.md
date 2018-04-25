@@ -6,16 +6,16 @@
 
 工作流中涉及到的角色介绍：
 
-+ 功能开发者：模块中功能的开发人员
-+ 开发管理员：由项目模块开发的小组长（team leader）担当
-+ 测试管理员：由测试团队指定人员担当
-+ 发布管理员：由生产环境发布团队指定人员担当
++ 功能开发者：模块中功能的开发人员；
++ 开发管理员：由项目模块开发的小组长（team leader）担当；
++ 测试管理员：由测试团队指定人员担当；
++ 发布管理员：由生产环境发布团队指定人员担当；
 
 ## Git Flow中的分支
 
 Git Flow模型中定义了主分支和辅助分支两类分支。其中主分支用于组织与软件开发、部署相关的活动；辅助分支组织为了解决特定的问题而进行的各种开发活动。
 
-## 主分支
+## 主分支 也可以称为 历史性分支（Historical Branches）
 
 <img src="content/main-branches@2x.png">
 
@@ -42,10 +42,11 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 辅助分支包括：
 
 + 用于开发新功能时所使用的feature分支；
-+ 用于辅助版本发布的release分支；
++ 用于集成测试、辅助版本发布的release分支；
 + 用于修正生产代码中的缺陷的hotfix分支。
 
-以上这些分支都有固定的使用目的和分支操作限制。从单纯技术的角度说，这些分支与Git其他分支并没有什么区别，但通过命名，我们定义了使用这些分支的方法。
+跟“历史性”分支相反，这三类分支都是短期分支，针对他们的工作内容完成后，一般都要进行删除。
+**工作内容完成的标识有两个：开发完成、合并完成，缺一不可。**
 
 ## feature分支
 
@@ -53,12 +54,12 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 
 使用规范：
 
-+ 从develop分支发起feature分支
-+ 在新开发完的feature推送到远端（origin）仓库后，代码必须合并回develop分支
-+ 由每组`开发管理员`负责把所有feature分支开发完成的代码合并到develop分支
-+ feature分支的命名不可以使用`master`，`develop`，`release-*`，`hotfix-*`；格式必须是`版本号-功能名`，例如`v1.0.0-login`
++ 从develop分支发起feature分支，从不与master分支、release分支直接交互；
++ 在新开发完的feature推送到远端（origin）仓库后，代码必须合并回develop分支；
++ 由每组`开发管理员`负责把所有feature分支开发完成的代码合并到develop分支；
++ feature分支的命名不可以使用<font color=red>`master`，<font color=red>`develop`</font>，<font color=red>`release-*`</font>，<font color=red>`hotfix-*`；格式必须是`版本号-功能名`</font>，例如<font color=red>`v1.0.0-login`</font>；
 
-feature分支（有时也可以被叫做“topic分支”）通常是在开发一项新的软件功能的时候使用，这个分支上的代码变更最终合并回develop分支或者干脆被抛弃掉（例如实验性且效果不好的代码变更）。
+feature分支通常是在开发一项新的软件功能的时候使用，这个分支上的代码变更最终合并回develop分支或者干脆被抛弃掉（例如实验性且效果不好的代码变更）。
 
 一般而言，feature分支代码可以保存在开发者自己的代码库中而不强制提交到主代码库里。
 
@@ -68,7 +69,7 @@ feature分支（有时也可以被叫做“topic分支”）通常是在开发�
 
 + 必须从develop分支派生
 + 必须合并回develop分支和master分支
-+ 分支命名惯例：`release-*`
++ 分支命名惯例：<font color=red>`release-*`</font>
 
 release分支是为发布新的产品版本而设计的。在这个分支上的代码允许做小的缺陷修正、准备发布版本所需的各项说明信息（版本号、发布时间、编译时间等等）。通过在release分支上进行这些工作可以让develop分支空闲出来以接受新的feature分支上的代码提交，进入新的软件开发迭代周期。
 
@@ -84,7 +85,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 
 + 必须从master分支派生
 + 必须合并回master分支和develop分支
-+ 分支命名惯例：`hotfix-*`
++ 分支命名惯例：<font color=red>`hotfix-*`</font>
 
 除了是计划外创建的以外，hotfix分支与release分支十分相似：都可以产生一个新的可供在生产环境部署的软件版本。
 
@@ -104,13 +105,13 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 3. `开发管理员`合并新增功能分支到主分支(develop branch)，然后关闭pull request
 
 
-## SourceTree mac版本下载地址
+### SourceTree mac版本下载地址
 
 SourceTree_2.3.1.zip
 
 链接:https://pan.baidu.com/s/1XHFvLh5MueebYjjGrEVcdQ  密码:opjd
 
-## SourceTree win版本下载地址
+### SourceTree win版本下载地址
 
 
 
