@@ -4,6 +4,13 @@
 
 <img src="content/Git-branching-model.png">
 
+工作流中涉及到的角色介绍：
+
++ 功能开发者：模块中功能的开发人员
++ 开发管理员：由项目模块开发的小组长（team leader）担当
++ 测试管理员：由测试团队指定人员担当
++ 发布管理员：由生产环境发布团队指定人员担当
+
 ## Git Flow中的分支
 
 Git Flow模型中定义了主分支和辅助分支两类分支。其中主分支用于组织与软件开发、部署相关的活动；辅助分支组织为了解决特定的问题而进行的各种开发活动。
@@ -26,8 +33,7 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 
 因此，每次将develop分支上的代码合并回master分支时，我们都可以认为一个新的可供在生产环境中部署的版本就产生了。通常而言，“仅在发布新的可供部署的代码时才更新master分支上的代码”是推荐所有人都遵守的行为准则。基于此，理论上说，每当有代码提交到master分支时，我们可以使用Git Hook触发软件自动测试以及生产环境代码的自动更新工作。这些自动化操作将有利于减少新代码发布之后的一些事务性工作。
 
-只有team leader有合并的权限
-
+只有`开发管理员`有合并的权限
 
 ## 辅助分支
 
@@ -47,9 +53,10 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 
 使用规范：
 
-+ 可以从develop分支发起feature分支
-+ 代码必须合并回develop分支
-+ feature分支的命名可以使用除`master`，`develop`，`release-*`，`hotfix-*` 之外的任何名称
++ 从develop分支发起feature分支
++ 在新开发完的feature推送到远端（origin）仓库后，代码必须合并回develop分支
++ 由每组`开发管理员`负责把所有feature分支开发完成的代码合并到develop分支
++ feature分支的命名不可以使用`master`，`develop`，`release-*`，`hotfix-*`；格式必须是`版本号-功能名`，例如`v1.0.0-login`
 
 feature分支（有时也可以被叫做“topic分支”）通常是在开发一项新的软件功能的时候使用，这个分支上的代码变更最终合并回develop分支或者干脆被抛弃掉（例如实验性且效果不好的代码变更）。
 
@@ -59,7 +66,7 @@ feature分支（有时也可以被叫做“topic分支”）通常是在开发�
 
 使用规范：
 
-+ 可以从develop分支派生
++ 必须从develop分支派生
 + 必须合并回develop分支和master分支
 + 分支命名惯例：`release-*`
 
@@ -75,7 +82,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 
 使用规范：
 
-+ 可以从master分支派生
++ 必须从master分支派生
 + 必须合并回master分支和develop分支
 + 分支命名惯例：`hotfix-*`
 
@@ -84,6 +91,28 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 当生产环境中的软件遇到了异常情况或者发现了严重到必须立即修复的软件缺陷的时候，就需要从master分支上指定的TAG版本派生hotfix分支来组织代码的紧急修复工作。
 
 这样做的显而易见的好处是不会打断正在进行的develop分支的开发工作，能够让团队中负责新功能开发的人与负责代码紧急修复的人并行的开展工作。
+
+## Pull Request
+
+Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`发送合并请求通知的机制。它的使用过程如下：
+
+1. `功能开发者`可以通过[Web页面](https://source.enncloud.cn)发送pull request
+
+<img src="content/pull-request@2x.png">
+
+2. `开发管理员`自己或组织其他的团队成员审查、讨论和修改代码
+3. `开发管理员`合并新增功能分支到主分支(develop branch)，然后关闭pull request
+
+
+## SourceTree mac版本下载地址
+
+SourceTree_2.3.1.zip
+
+链接:https://pan.baidu.com/s/1XHFvLh5MueebYjjGrEVcdQ  密码:opjd
+
+## SourceTree win版本下载地址
+
+
 
 ## FNLogin 分支
 
