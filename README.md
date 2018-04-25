@@ -46,6 +46,7 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 + 用于修正生产代码中的缺陷的hotfix分支。
 
 跟“历史性”分支相反，这三类分支都是短期分支，针对他们的工作内容完成后，一般都要进行删除。
+
 **工作内容完成的标识有两个：开发完成、合并完成，缺一不可。**
 
 ## feature分支
@@ -57,11 +58,12 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 + 从develop分支发起feature分支，从不与master分支、release分支直接交互；
 + 在新开发完的feature推送到远端（origin）仓库后，代码必须合并回develop分支；
 + 由每组`开发管理员`负责把所有feature分支开发完成的代码合并到develop分支；
-+ feature分支的命名不可以使用<font color=red>`master`，<font color=red>`develop`</font>，<font color=red>`release-*`</font>，<font color=red>`hotfix-*`；格式必须是`版本号-功能名`</font>，例如<font color=red>`v1.0.0-login`</font>；
++ feature分支的命名不可以使用<font color=red>`master`</font>，<font color=red>`develop`</font>，<font color=red>`release-*`</font>，<font color=red>`hotfix-*`；格式必须是`版本号-功能名`</font>，例如<font color=red>`v1.0.0-login`</font>；
 
 feature分支通常是在开发一项新的软件功能的时候使用，这个分支上的代码变更最终合并回develop分支或者干脆被抛弃掉（例如实验性且效果不好的代码变更）。
 
 一般而言，feature分支代码可以保存在开发者自己的代码库中而不强制提交到主代码库里。
+
 
 ## release分支
 
@@ -105,6 +107,8 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 3. `开发管理员`合并新增功能分支到主分支(develop branch)，然后关闭pull request
 
 
+
+
 ### SourceTree mac版本下载地址
 
 SourceTree_2.3.1.zip
@@ -113,6 +117,11 @@ SourceTree_2.3.1.zip
 
 ### SourceTree win版本下载地址
 
+SourceTree2480.zip
+
+<SourceTree2480 class="zip"></SourceTree2480>
+
+链接:https://pan.baidu.com/s/1z6UC7LrzJLNn9yeQnxoWyg  密码:7uac
 
 
 ## FNLogin 分支
