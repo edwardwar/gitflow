@@ -43,6 +43,8 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 
 ## feature分支
 
+<img src="content/fb@2x.png">
+
 使用规范：
 
 + 可以从develop分支发起feature分支
@@ -68,6 +70,8 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 成功的派生了release分支，并被赋予版本号之后，develop分支就可以为“下一个版本”服务了。所谓的“下一个版本”是在当前即将发布的版本之后发布的版本。版本号的命名可以依据项目定义的版本号命名规则进行。
 
 ## hotfix分支
+
+<img src="content/hotfix-branches@2x.png">
 
 使用规范：
 
