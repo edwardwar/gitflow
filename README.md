@@ -10,6 +10,8 @@ Git Flow模型中定义了主分支和辅助分支两类分支。其中主分支
 
 ## 主分支
 
+<img src="content/main-branches@2x.png">
+
 主分支是所有开发活动的核心分支。所有的开发活动产生的输出物最终都会反映到主分支的代码中。主分支分为master分支和develop分支。
 
 ## master分支
@@ -45,7 +47,7 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 
 + 可以从develop分支发起feature分支
 + 代码必须合并回develop分支
-+ feature分支的命名可以使用除master，develop，release-*，hotfix-*之外的任何名称
++ feature分支的命名可以使用除`master`，`develop`，`release-*`，`hotfix-*` 之外的任何名称
 
 feature分支（有时也可以被叫做“topic分支”）通常是在开发一项新的软件功能的时候使用，这个分支上的代码变更最终合并回develop分支或者干脆被抛弃掉（例如实验性且效果不好的代码变更）。
 
@@ -57,7 +59,7 @@ feature分支（有时也可以被叫做“topic分支”）通常是在开发�
 
 + 可以从develop分支派生
 + 必须合并回develop分支和master分支
-+ 分支命名惯例：[ release-* ]
++ 分支命名惯例：`release-*`
 
 release分支是为发布新的产品版本而设计的。在这个分支上的代码允许做小的缺陷修正、准备发布版本所需的各项说明信息（版本号、发布时间、编译时间等等）。通过在release分支上进行这些工作可以让develop分支空闲出来以接受新的feature分支上的代码提交，进入新的软件开发迭代周期。
 
@@ -71,7 +73,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 
 + 可以从master分支派生
 + 必须合并回master分支和develop分支
-+ 分支命名惯例：hotfix-*
++ 分支命名惯例：`hotfix-*`
 
 除了是计划外创建的以外，hotfix分支与release分支十分相似：都可以产生一个新的可供在生产环境部署的软件版本。
 
