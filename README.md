@@ -131,8 +131,9 @@ mercurial-4.4.1-x64.msi
 安装SourceTree打开后会提示你Atlassian需要注册，这家软件公司在澳大利亚，所以注册时需要翻墙，才能注册成功，这里提供一个跳过注册的方法
 
 1. 找到目录：C:\Users\用户\AppData\Local\Atlassian\SourceTree
-2. 新建accounts.json文件里面输入
-<code>
+2. 新建accounts.json文件里面输入下面代码块内容后，重新打开，就不会提示注册了！
+
+```
 [  
   {  
     "$id": "1",  
@@ -157,9 +158,7 @@ mercurial-4.4.1-x64.msi
     "IsDefault": false  
   }  
 ]
-</code>
-3. 重新打开，就不会提示注册了！
-
+```
 
 ## FNLogin 分支
 
