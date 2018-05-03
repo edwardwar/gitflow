@@ -99,14 +99,11 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 
 Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`发送合并请求通知的机制。它的使用过程如下：
 
-1. `功能开发者`可以通过[Web页面](https://source.enncloud.cn)发送pull request
-
 <img src="content/pull-request@2x.png">
 
+1. `功能开发者`可以通过[Web页面](https://source.enncloud.cn)发送pull request
 2. `开发管理员`自己或组织其他的团队成员审查、讨论和修改代码
-3. `开发管理员`合并新增功能分支到主分支(develop branch)，然后关闭pull request
-
-
+3. `开发管理员`合并新增功能分支到develop分支，然后关闭pull request
 
 
 ### SourceTree mac版本下载地址
@@ -119,9 +116,49 @@ SourceTree_2.3.1.zip
 
 SourceTree2480.zip
 
-<SourceTree2480 class="zip"></SourceTree2480>
-
 链接:https://pan.baidu.com/s/1z6UC7LrzJLNn9yeQnxoWyg  密码:7uac
+
+windows下使用sourcetree需要安装一下软件，请在安装sourcetree前安装好：
+
+Git-2.17.0-64-bit.exe
+
+链接:https://pan.baidu.com/s/1q0WQw03U9oCmhN5Fii7PNQ  密码:ab2n
+
+mercurial-4.4.1-x64.msi
+
+链接:https://pan.baidu.com/s/1PBIRFFMPsIe3MoV_42dDzg  密码:nvkx
+
+安装SourceTree打开后会提示你Atlassian需要注册，这家软件公司在澳大利亚，所以注册时需要翻墙，才能注册成功，这里提供一个跳过注册的方法
+
+1. 找到目录：C:\Users\用户\AppData\Local\Atlassian\SourceTree
+2. 新建accounts.json文件里面输入
+<code>
+[  
+  {  
+    "$id": "1",  
+    "$type": "SourceTree.Api.Host.Identity.Model.IdentityAccount, SourceTree.Api.Host.Identity",  
+    "Authenticate": true,  
+    "HostInstance": {  
+      "$id": "2",  
+      "$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountInstance, SourceTree.Host.AtlassianAccount",  
+      "Host": {  
+        "$id": "3",  
+        "$type": "SourceTree.Host.Atlassianaccount.AtlassianAccountHost, SourceTree.Host.AtlassianAccount",  
+        "Id": "atlassian account"  
+      },  
+      "BaseUrl": "https://id.atlassian.com/"  
+    },  
+    "Credentials": {  
+      "$id": "4",  
+      "$type": "SourceTree.Model.BasicAuthCredentials, SourceTree.Api.Account",  
+      "Username": "",  
+      "Email": null  
+    },  
+    "IsDefault": false  
+  }  
+]
+</code>
+3. 重新打开，就不会提示注册了！
 
 
 ## FNLogin 分支
