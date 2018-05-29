@@ -107,10 +107,21 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 
 # 工作流程
 
-1⃣️ 由team leader负责在<img src="content/favicon.png">上创建空白的仓库，并clone到本地，在sourcetree的git flow菜单中选择初始化仓库，并push到远端
+1⃣️ 由team leader负责在<img src="content/favicon.png">上创建空白的仓库，并clone到本地，在sourcetree的git flow菜单中选择初始化仓库，并push到远端。
 
-2⃣️ 在<img src="content/favicon.png">上设置保护分支，把master、develop分支保护起来，只有指定人可push
+2⃣️ 在<img src="content/favicon.png">上设置保护分支，把master、develop分支保护起来，只有指定人可push。
 
+3⃣️ 开发人员clone代码到本地，先在sourcetree的git flow菜单中选择初始化仓库，然后再开始新建功能分支，进行开发工作。
+
+<img src="content/init_repo.png">
+
+<img src="content/new_feature.png">
+
+4⃣️ 当新功能开发完后，点完成功能开发按钮，结束新功能的分支开发。
+
+<img src="content/finish_feature.png">
+
+5⃣️ release、hotfix分支和feature分支操作类似。
 
 ## SourceTree mac版本下载地址
 
