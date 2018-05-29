@@ -190,3 +190,7 @@ mercurial-4.4.1-x64.msi
 ## FNForgetPassword
 
 仅仅是测试
+
+## FNNewFeature
+
+本地分支
