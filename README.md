@@ -58,7 +58,7 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 + 从develop分支发起feature分支，从不与master分支、release分支直接交互；
 + 在新开发完的feature推送到远端（origin）仓库后，代码必须合并回develop分支；
 + 由每组`开发管理员`负责把所有feature分支开发完成的代码合并到develop分支；
-+ feature分支的命名不可以使用<font color=red>`master`</font>，<font color=red>`develop`</font>，<font color=red>`release-*`</font>，<font color=red>`hotfix-*`；格式必须是`版本号-功能名`</font>，例如<font color=red>`v1.0.0-login`</font>；
++ feature分支的命名不可以使用`master`，`develop`，`release-*`，`hotfix-*`；格式必须是`版本号-功能名`，例如`v1.0.0-login`；
 
 feature分支通常是在开发一项新的软件功能的时候使用，这个分支上的代码变更最终合并回develop分支或者干脆被抛弃掉（例如实验性且效果不好的代码变更）。
 
@@ -71,7 +71,7 @@ feature分支通常是在开发一项新的软件功能的时候使用，这个�
 
 + 必须从develop分支派生
 + 必须合并回develop分支和master分支
-+ 分支命名惯例：<font color=red>`release-*`</font>
++ 分支命名惯例：`release-*`
 
 release分支是为发布新的产品版本而设计的。在这个分支上的代码允许做小的缺陷修正、准备发布版本所需的各项说明信息（版本号、发布时间、编译时间等等）。通过在release分支上进行这些工作可以让develop分支空闲出来以接受新的feature分支上的代码提交，进入新的软件开发迭代周期。
 
@@ -87,7 +87,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 
 + 必须从master分支派生
 + 必须合并回master分支和develop分支
-+ 分支命名惯例：<font color=red>`hotfix-*`</font>
++ 分支命名惯例：`hotfix-*`
 
 除了是计划外创建的以外，hotfix分支与release分支十分相似：都可以产生一个新的可供在生产环境部署的软件版本。
 
@@ -159,6 +159,8 @@ mercurial-4.4.1-x64.msi
   }  
 ]
 ```
+
+# 以下仅仅是测试内容
 
 ## FNLogin 分支
 
