@@ -105,14 +105,20 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 2. `开发管理员`自己或组织其他的团队成员审查、讨论和修改代码
 3. `开发管理员`合并新增功能分支到develop分支，然后关闭pull request
 
+# 工作流程
 
-### SourceTree mac版本下载地址
+1⃣️ 由team leader负责在<img src="content/favicon.png">上创建空白的仓库，并clone到本地，在sourcetree的git flow菜单中选择初始化仓库，并push到远端
+
+2⃣️ 在<img src="content/favicon.png">上设置保护分支，把master、develop分支保护起来，只有指定人可push
+
+
+## SourceTree mac版本下载地址
 
 SourceTree_2.3.1.zip
 
 链接:https://pan.baidu.com/s/1XHFvLh5MueebYjjGrEVcdQ  密码:opjd
 
-### SourceTree win版本下载地址
+## SourceTree win版本下载地址
 
 SourceTree2480.zip
 
