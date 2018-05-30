@@ -201,3 +201,5 @@ mercurial-4.4.1-x64.msi
 
 ## test2
 
+## v1.0.2
+
