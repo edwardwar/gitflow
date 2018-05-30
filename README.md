@@ -102,8 +102,10 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 <img src="content/pull-request@2x.png">
 
 1. `功能开发者`可以通过[Web页面](https://source.enncloud.cn)发送pull request
+
+
 2. `开发管理员`自己或组织其他的团队成员审查、讨论和修改代码
-3. `开发管理员`合并新增功能分支到develop分支，然后关闭pull request
+3. `开发管理员`合并新增功能分支到develop分支，然后关闭pull request，并且可以选择删除新增分支
 
 # 工作流程
 
