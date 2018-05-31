@@ -121,7 +121,6 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 
 4⃣️ 当新功能开发完后，点完成功能开发按钮，结束新功能的分支开发。
 
-<img src="content/finish_feature.png">
 
 5⃣️ release、hotfix分支和feature分支操作类似。
 
