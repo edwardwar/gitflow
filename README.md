@@ -109,11 +109,13 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 
 # 工作流程
 
-1⃣️ 由team leader负责在<img src="content/favicon.png">上创建空白的仓库，并clone到本地，在sourcetree的git flow菜单中选择初始化仓库，并push到远端。
+1⃣️ 由`开发管理员`负责在<img src="content/favicon.png">上创建空白的仓库，并clone到本地，在sourcetree的git flow菜单中选择初始化仓库，并push到远端。
+
+<img src="content/init_repo.png" width="200" align=center >
 
 2⃣️ 在<img src="content/favicon.png">上设置保护分支，把master、develop分支保护起来，只有指定人可push。
 
-3⃣️ 开发人员clone代码到本地，先在sourcetree的git flow菜单中选择初始化仓库。
+3⃣️ `功能开发者`clone代码到本地，先在sourcetree的git flow菜单中选择初始化仓库。
 
 <img src="content/init_repo.png">
 
@@ -121,11 +123,13 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 
 <img src="content/new_feature.png">
 
-5⃣️ 新功能开发完成一部分后，push到远端，发起pull request给管理员，review代码并合并
+5⃣️ 新功能开发全部完成或部分完成后，`功能开发者`把最新代码push到远端同样的新功能分支里，并在<img src="content/favicon.png">发起pull request给`开发管理员`
 
-6⃣️ 当新功能开发完后，点完成功能开发按钮，结束新功能的分支开发。
+6⃣️ `开发管理员`review代码，选择合并代码到develop，并可选择删除已经合并的新功能分支
 
-7⃣️ release、hotfix分支和feature分支操作类似。
+7⃣️ 当`开发管理员`处理完合并请求后，开发者点完成功能开发按钮，结束新功能的分支开发，此时可选择删除本地分支，结束后sourcetree会切换到develop本地分支，此时开发者pull远端develop分支最新代码即可，可忽视本地的push提醒。
+
+8⃣️ release、hotfix分支和feature分支操作类似。
 
 ## SourceTree mac版本下载地址
 
