@@ -1,6 +1,7 @@
 # FNGitFlowShow
 
 演示GitFlow工作流操作用仓库
+
 <center>
 <img src="content/Git-branching-model.png" width="300">
 </center>
@@ -17,9 +18,11 @@
 Git Flow模型中定义了主分支和辅助分支两类分支。其中主分支用于组织与软件开发、部署相关的活动；辅助分支组织为了解决特定的问题而进行的各种开发活动。
 
 ## 主分支 也可以称为 历史性分支（Historical Branches）
+
 <center>
 <img src="content/main-branches@2x.png" width="180">
 </center>
+
 主分支是所有开发活动的核心分支。所有的开发活动产生的输出物最终都会反映到主分支的代码中。主分支分为master分支和develop分支。
 
 ## master分支
@@ -51,9 +54,11 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 **工作内容完成的标识有两个：开发完成、合并完成，缺一不可。**
 
 ## feature分支
+
 <center>
 <img src="content/fb@2x.png" width="130">
 </center>
+
 使用规范：
 
 + 从develop分支发起feature分支，从不与master分支、release分支直接交互；
@@ -81,9 +86,11 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 成功的派生了release分支，并被赋予版本号之后，develop分支就可以为“下一个版本”服务了。所谓的“下一个版本”是在当前即将发布的版本之后发布的版本。版本号的命名可以依据项目定义的版本号命名规则进行。
 
 ## hotfix分支
+
 <center>
 <img src="content/hotfix-branches@2x.png" width="200">
 </center>
+
 使用规范：
 
 + 必须从master分支派生
@@ -99,12 +106,12 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 ## Pull Request
 
 Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`发送合并请求通知的机制。它的使用过程如下：
+
 <center>
 <img src="content/pull-request@2x.png" width = "500">
 </center>
+
 1. `功能开发者`可以通过[Web页面](https://source.enncloud.cn)发送pull request
-
-
 2. `开发管理员`自己或组织其他的团队成员审查、讨论和修改代码
 3. `开发管理员`合并新增功能分支到develop分支，然后关闭pull request，并且可以选择删除新增分支
 
