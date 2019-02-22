@@ -2,7 +2,7 @@
 
 演示GitFlow工作流操作用仓库
 <center>
-<img src="content/Git-branching-model.png" width="300" height="500">
+<img src="content/Git-branching-model.png" width="300">
 </center>
 
 工作流中涉及到的角色介绍：
@@ -18,7 +18,7 @@ Git Flow模型中定义了主分支和辅助分支两类分支。其中主分支
 
 ## 主分支 也可以称为 历史性分支（Historical Branches）
 <center>
-<img src="content/main-branches@2x.png" width="180" height="300">
+<img src="content/main-branches@2x.png" width="180">
 </center>
 主分支是所有开发活动的核心分支。所有的开发活动产生的输出物最终都会反映到主分支的代码中。主分支分为master分支和develop分支。
 
@@ -52,7 +52,7 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 
 ## feature分支
 <center>
-<img src="content/fb@2x.png" width="130" height="300">
+<img src="content/fb@2x.png" width="130">
 </center>
 使用规范：
 
@@ -82,7 +82,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 
 ## hotfix分支
 <center>
-<img src="content/hotfix-branches@2x.png" width="200" height="300">
+<img src="content/hotfix-branches@2x.png" width="200">
 </center>
 使用规范：
 
@@ -100,7 +100,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 
 Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`发送合并请求通知的机制。它的使用过程如下：
 <center>
-<img src="content/pull-request@2x.png" >
+<img src="content/pull-request@2x.png" width = "500">
 </center>
 1. `功能开发者`可以通过[Web页面](https://source.enncloud.cn)发送pull request
 
@@ -111,19 +111,25 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 # 工作流程
 
 1⃣️ 由`开发管理员`负责在<img src="content/favicon.png">上创建空白的仓库，并clone到本地，在sourcetree的git flow菜单中选择初始化仓库，并push到远端。
+
 <center>
 <img src="content/init_repo.png" width="200" >
 </center>
+
 2⃣️ 在<img src="content/favicon.png">上设置保护分支，把master、develop分支保护起来，只有指定人可push。
 
 3⃣️ `功能开发者`clone代码到本地，先在sourcetree的git flow菜单中选择初始化仓库。
+
 <center>
 <img src="content/init_repo.png" width="200">
 </center>
+
 4⃣️ 然后再开始新建功能分支，进行开发工作。
+
 <center>
 <img src="content/new_feature.png" width="200">
 </center>
+
 5⃣️ 新功能开发全部完成或部分完成后，`功能开发者`把最新代码push到远端同样的新功能分支里，并在<img src="content/favicon.png">发起pull request给`开发管理员`
 
 6⃣️ `开发管理员`review代码，选择合并代码到develop，并可选择删除已经合并的新功能分支
@@ -139,6 +145,7 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 8⃣️ release、hotfix分支和feature分支操作类似。
 
 9⃣️ 不可点击完成新功能、完成发布版本、完成修复补丁，因为这样会导致自动合并代码到master或develop分支
+
 <center>
 <img src="content/finish_feature_no.png" width="200">
 </center>
