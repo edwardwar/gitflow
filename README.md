@@ -3,7 +3,7 @@
 演示GitFlow工作流操作用仓库
 
 <center>
-<img src="content/Git-branching-model.png" width="300">
+<img src="content/Git-branching-model.png" width="375">
 </center>
 
 工作流中涉及到的角色介绍：
@@ -20,7 +20,7 @@ Git Flow模型中定义了主分支和辅助分支两类分支。其中主分支
 ## 主分支 也可以称为 历史性分支（Historical Branches）
 
 <center>
-<img src="content/main-branches@2x.png" width="180">
+<img src="content/main-branches@2x.png" width="375">
 </center>
 
 主分支是所有开发活动的核心分支。所有的开发活动产生的输出物最终都会反映到主分支的代码中。主分支分为master分支和develop分支。
@@ -56,7 +56,7 @@ develop分支是保存当前最新开发成果的分支。通常这个分支上�
 ## feature分支
 
 <center>
-<img src="content/fb@2x.png" width="130">
+<img src="content/fb@2x.png" width="375">
 </center>
 
 使用规范：
@@ -88,7 +88,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 ## hotfix分支
 
 <center>
-<img src="content/hotfix-branches@2x.png" width="200">
+<img src="content/hotfix-branches@2x.png" width="375">
 </center>
 
 使用规范：
@@ -108,7 +108,7 @@ release分支是为发布新的产品版本而设计的。在这个分支上的�
 Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`发送合并请求通知的机制。它的使用过程如下：
 
 <center>
-<img src="content/pull-request@2x.png" width = "500">
+<img src="content/pull-request@2x.png" width = "375">
 </center>
 
 1. `功能开发者`可以通过[Web页面](https://source.enncloud.cn)发送pull request
@@ -120,7 +120,7 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 1⃣️ 由`开发管理员`负责在<img src="content/favicon.png">上创建空白的仓库，并clone到本地，在sourcetree的git flow菜单中选择初始化仓库，并push到远端。
 
 <center>
-<img src="content/init_repo.png" width="200" >
+<img src="content/init_repo.png" width="375" >
 </center>
 
 2⃣️ 在<img src="content/favicon.png">上设置保护分支，把master、develop分支保护起来，只有指定人可push。
@@ -128,13 +128,13 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 3⃣️ `功能开发者`clone代码到本地，先在sourcetree的git flow菜单中选择初始化仓库。
 
 <center>
-<img src="content/init_repo.png" width="200">
+<img src="content/init_repo.png" width="375">
 </center>
 
 4⃣️ 然后再开始新建功能分支，进行开发工作。
 
 <center>
-<img src="content/new_feature.png" width="200">
+<img src="content/new_feature.png" width="375">
 </center>
 
 5⃣️ 新功能开发全部完成或部分完成后，`功能开发者`把最新代码push到远端同样的新功能分支里，并在<img src="content/favicon.png">发起pull request给`开发管理员`
@@ -143,10 +143,10 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 
 7⃣️ 当`开发管理员`处理完合并请求后，开发者,切换到develop分支，直接删除自己的本地分支及远程分支，不要点击完成(Finish Feature)，此时开发者pull远端develop分支最新代码即可，可忽视本地的push提醒。
 <center>
-<img src="content/delete_feature1.png" width="200">
+<img src="content/delete_feature1.png" width="375">
 </center>
 <center>
-<img src="content/delete_feature2.png" width="200">
+<img src="content/delete_feature2.png" width="375">
 </center>
 
 8⃣️ release、hotfix分支和feature分支操作类似。
@@ -154,7 +154,7 @@ Pull Request是当`功能开发者`完成一个新功能后向`项目维护者`�
 9⃣️ 不可点击完成新功能、完成发布版本、完成修复补丁，因为这样会导致自动合并代码到master或develop分支
 
 <center>
-<img src="content/finish_feature_no.png" width="200">
+<img src="content/finish_feature_no.png" width="375">
 </center>
 
 ## SourceTree mac版本下载地址
@@ -211,30 +211,3 @@ mercurial-4.4.1-x64.msi
 ]
 ```
 
-# 以下仅仅是测试内容
-
-## FNLogin 分支
-
-临时功能性分支，在此分支下开发新增加的功能
-
-## FNRegister 分支
-
-注册模块功能分支，主要实现注册相关界面及网络请求
-
-## FNForgetPassword
-
-仅仅是测试
-
-## FNNewFeature
-
-本地分支
-
-## v1
-
-## test2
-
-## v1.0.2
-
-## rabase 2
-
-## test rebase 1
