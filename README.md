@@ -336,3 +336,16 @@ mercurial-4.4.1-x64.msi
 ## 推荐工具
 
 * **Git Flow 扩展** Git Flow模型提出者nvie写的Git命令集扩展，提供了极出色的命令帮助以及输出提示。支持OSX，Linux和Windows平台。参考：[git-flow 备忘清单](http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html)
+
+## WebStorm模板插件
+插件链接地址：https://plugins.jetbrains.com/plugin/9861-git-commit-template
+1. 插件安装
+将插件（commit-template-idea-plugin.jar）拷贝到WebStorm安装目录下的lib目录下，C:\Program Files\JetBrains\WebStorm 2018.2.3\lib
+<center>
+<img src="images/plugInstall.png" width="375">
+</center>
+2. 如何使用
+在代码提交时，引入git commit message模板。
+<center>
+<img src="images/how2use.png" width="375">
+</center>
