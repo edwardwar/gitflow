@@ -108,11 +108,11 @@ Revert
 
 | 名称 | 说明 | 命名规范 |命名示例 |合并目标 |合并操作 |
 | ------ | ------ | ------ | ------ | ------ | ------ |
-| master | 线上稳定版本 | master | master | -- | -- |  
-| release | 待发布分支，下个版本需上线的版本 | release/xxx | release/v1.0.0 | master | merge request | 
-| develop | 当前正在开发的分支 | develop | develop | master | merge request | 
-| feature | 功能分支，每个功能需分别建立自己的子分支 | feature/版本号-功能名 | feature/v1.0.0-Login | develop | merge request | 
-| hotfix | 紧急修复分支 | hotfix/xxx | hotfix/v1.0.1 | master/develop | merge request | 
+| master | 线上稳定版本 | master | master | -- | -- |
+| release | 待发布分支，下个版本需上线的版本 | release/xxx | release/v1.0.0 | master | merge request |
+| develop | 当前正在开发的分支 | develop | develop | master | merge request |
+| feature | 功能分支，每个功能需分别建立自己的子分支 | feature/版本号-功能名 | feature/v1.0.0-Login | develop | merge request |
+| hotfix | 紧急修复分支 | hotfix/xxx | hotfix/v1.0.1 | master/develop | merge request |
 
 ### 分支约定
 　　Git Flow有主分支和辅助分支两类分支。其中主分支用于组织与软件开发、部署相关的活动；辅助分支组织为了解决特定的问题而进行的各种开发活动。
@@ -340,12 +340,28 @@ mercurial-4.4.1-x64.msi
 ## WebStorm模板插件
 插件链接地址：https://plugins.jetbrains.com/plugin/9861-git-commit-template
 1. 插件安装
-将插件（commit-template-idea-plugin.jar）拷贝到WebStorm安装目录下的lib目录下，C:\Program Files\JetBrains\WebStorm 2018.2.3\lib
+  将插件（commit-template-idea-plugin.jar）拷贝到WebStorm安装目录下的lib目录下，
+
+  a) windows版
+
+  ​     C:\Program Files\JetBrains\WebStorm 2018.2.3\lib
+
 <center>
-<img src="images/plugInstall.png" width="375">
+<img src="images/plugInstall.png" width="600">
 </center>
-2. 如何使用
-在代码提交时，引入git commit message模板。
+
+​	b) Mac版
+
+​		/Applications/WebStorm.app/Contents/lib
+
 <center>
-<img src="images/how2use.png" width="375">
+<img src="images/mac.png" width="600">
 </center>
+
+	2. 如何使用
+	在代码提交时，引入git commit message模板。
+
+<center>
+<img src="images/how2use.png" width="600">
+</center>
+
