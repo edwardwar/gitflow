@@ -1,6 +1,6 @@
 # Git 本地仓库的搭建
 
-Git本地远程仓库的搭建(局域网内也可提交)
+Git本地仓库的搭建(局域网内也可提交)
 
 ### 功能需求
 * 创建根仓库(总仓库，比如本机D盘)里文件可见。
@@ -107,6 +107,7 @@ git remote add origin https://github.com/liujianguangnice/MultiRepDouble.git
 添加一个远程库 名字不能重复，用mirror
 git remote add mirror https://github.com/liujianguangnice/MultiRepOne.git
 ```
+
 3.拉取其中一个仓库（mirror）代码：
 ```Java
 git pull mirror master
