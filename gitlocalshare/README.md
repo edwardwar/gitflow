@@ -97,7 +97,7 @@ git push origin master
 git clone Z:
 ```
 
-#### 一个git本地仓库，推送多个远程仓库（多个本地仓库也可以）
+#### 一个git本地仓库，推送多个远程仓库（同样，多个本地仓库也可以）
 1.连接远程仓库
 ```Java
 git remote add origin https://github.com/liujianguangnice/MultiRepDouble.git
