@@ -14,7 +14,7 @@
 * 两台机器可以ping通。
 
 ### 功能实现
-#### 根仓库的搭建
+#### 根仓库的搭建(不会有提交的文件目录，只是裸仓库，用于存放数据)
 1.机器A,建一个空文件夹来做仓库，例如 Test.git
 
 ```java
@@ -41,10 +41,22 @@ git checkout -f
 
 <img src="images/git_set.png">
 
+5.提交基本数据
+
+git add .
+
+git commit -m "add 111.text"
+
+<img src="images/git_create_base.png">
+
+仓库地址：E:\fn_code\code_pri_git_server\Test.git
+
+<img src="images/裸仓库地址.png">
+
 
 这样，本地的根仓库就搭建好了。
 
-#### 本地仓库关联根仓库(Test.git)并提交
+#### 本地仓库（git_test）关联根仓库(Test.git)并提交
 
 1.机器A,本地仓库构建
 ```java
@@ -56,14 +68,24 @@ git remote add origin /e/fn_code/code_pri_git_server/Test.git
 ```
 通过git remote -v 查看是否建立关联
 
-3.在自己的仓库中向根仓库做提交， git push 仓库名 分支名
-```java
-git push origin master
-```
-4.在自己的仓库中做拉取， git pull 仓库名 分支名
+3.在自己的仓库中做拉取， git pull 仓库名 分支名
 ```java
 git pull origin master
 ```
+
+<img src="images/git_pull.png">
+
+
+4.在自己的仓库中向根仓库做提交， git push 仓库名 分支名
+```java
+git push origin master
+```
+（根仓库的数据已经更新，但根仓库目录还是旧的目录，新建仓库可以拉取最新的根仓库代码）
+<img src="images/git_push.png">
+
+5.第二个本地仓库拉取代码
+
+<img src="images/git_pull2.png">
 
 #### 局域网内其他机器访问根仓库并向根仓库提交
 其他机器(机器B)访问根仓库(机器A)，只需要将根仓库文件夹共享就可以(添加密码验证)。
