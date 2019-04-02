@@ -121,8 +121,10 @@ git pull mirror master --allow-unrelated-histories
 4.推送到远端仓库:
 git push 仓库别名   本地分支名：远程分支名（也可：git push origin 本地分支名:远程分支名）
 ```Java
-#推送数据到origin仓库的master分支
+#本地的develop分支代码，推送数据到origin仓库的master分支
 git push origin develop:master
+#本地的develop分支代码，推送数据到mirror仓库的master分支
+git push mirror develop:master
 ```
 
 想一次推送两个仓库的话,使用set-url添加另外一个远程库：
@@ -133,5 +135,6 @@ git push origin master
 ```
 5.删除仓库关联
 ```Java
+#删除mirror仓库的远程关联，
 git remote rm mirror
 ```
