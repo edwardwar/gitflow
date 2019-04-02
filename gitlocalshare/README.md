@@ -133,5 +133,5 @@ git push origin master
 ```
 5.删除仓库关联
 ```Java
-git remote rm mirorr
+git remote rm mirror
 ```
